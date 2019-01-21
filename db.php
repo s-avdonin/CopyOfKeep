@@ -10,10 +10,10 @@ mysqli_set_charset($connection,"utf8" );
 if(!$connection)
 {
 	 
-            <script>
+            //<script>
                 // сообщение об ошибке подключения
-                alert("Не удалось подключиться к базе данных.");
-             </script>
+              //  alert("Не удалось подключиться к базе данных.");
+             //</script>
     mysqli_error($connection);
 }
 ?>
