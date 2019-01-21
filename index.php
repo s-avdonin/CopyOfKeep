@@ -23,6 +23,7 @@ if (isset($_SESSION['id'])) {
 if (isset($id)) {
 // в отдельно созданном файле берём параметры подключения
     include_once("db.php");
+	
 // запрос к БД: записываем в переменную $result выборку всех записей из таблицы notes по текущему пользователю
     $result = mysqli_query($connection, "SELECT * 
                                             FROM notes 
