@@ -1,6 +1,6 @@
 <?php
 // если нужно, создаём базу данных и таблицы
-CREATE DATABASE IF NOT EXISTS keepnotes CHARACTER SET latin1 COLLATE latin1_swedish_ci
+/*CREATE DATABASE IF NOT EXISTS keepnotes CHARACTER SET latin1 COLLATE latin1_swedish_ci
 
 USE keepnotes;
 CREATE  TABLE IF NOT EXISTS keepnotes.user (
@@ -20,7 +20,7 @@ CREATE  TABLE IF NOT EXISTS keepnotes.notes (
   PRIMARY KEY (id),
   FOREIGN KEY (users_id) REFERENCES user(id)  )
 ENGINE = InnoDB;
-
+*/
 // создаём переменную в которую записываем подключение к БД
 $connection = mysqli_connect ("localhost", "db_user", "1234", "keepnotes");
 // устанавливаем для подключения кодировку utf8
