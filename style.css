@@ -1,0 +1,33 @@
+/* цвет фона страницы */
+body {
+    background-color: #f0ffff;
+}
+/* класс описывает внешний вид заметки */
+.note_block {
+    background-color: cornsilk;
+    width: 350px;
+    border: double;
+    margin: 3em;
+    /*обтекание другими элементами + расположение по левому краю */
+    float: left;
+    padding: 5px;
+    /* настройка тени*/
+    box-shadow: 10px 5px 20px -5px rgba(5, 0, 0, 0.5);
+
+}
+/* настройка абзацев внутри класса */
+.note_block p {
+    max-height: 250px;
+    /*содержимое блочного элемента не более заданного размера, иначе - полоса прокрутки*/
+    overflow: auto;
+}
+/* настройка заголовков внутри класса */
+.note_block h3 {
+    margin-left: 1em
+}
+/* настройка текстовых полей внутри класса */
+.note_block textarea {
+    width: 95%;
+    scroll: auto;
+    font-family: Arial;
+}
