@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
             $pass = md5($_POST['pass']);
             $pass_err = "<br>";
             // запрос к базе данных на добавление юзера
-            mysqli_query($connection, "INSERT INTO user (`id`, `name`, `login`, `pass`) 
+            mysqli_query($connection, "INSERT INTO user 
                                     VALUES (NULL,'$name','$login','$pass')");
             ?>
             <script>
