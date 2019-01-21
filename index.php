@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
 
 <head>
     <title>Keep Notes</title>
-    <!--    подключаем стили -->
+    <!--  test  подключаем стили -->
     <link rel="stylesheet" href="style.css">
     <!--    подключаем скрипты -->
     <script type="text/javascript" src="script.js"></script>
