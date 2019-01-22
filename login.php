@@ -11,7 +11,7 @@ $pass_err = "";
 if (isset($_POST['submit'])) {
     // записываем в пременные данные формы
     $login = $_POST['login'];
-    $pass = md5($_POST['pass']);
+    $pass = $_POST['pass'];
     // запрашиваем из БД данные о зарегистрированном пользователе
     $login_query = mysqli_query($connection, "SELECT * 
                                                 FROM user 
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     // записываем в массив $login_data полученные данные
     $login_data = mysqli_fetch_array($login_query);
     // проверяем правильность пароля
-    if ($login_data['pass'] == $pass) {
+    if (password_verify($pass, $login_data['pass'])) {
         // запиываем в глобальный массив $_SESSION данные юзера
         $_SESSION['login'] = $login_data['login'];
         $_SESSION['name'] = $login_data['name'];
